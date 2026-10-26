@@ -1,0 +1,5 @@
+# Every crawler (search engines and AI agents) may read the whole site.
+User-agent: *
+Allow: /
+
+Sitemap: https://teetham.com/sitemap.xml
