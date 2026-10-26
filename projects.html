@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Teetham Treelayapewat</title>
+  <meta name="description" content="Projects by Teetham Treelayapewat: X-ray landmark detection, a Geant4 particle simulation (Regeneron ISEF 2025), an autonomous vehicle, and an automated tensile testing machine." />
+  <meta name="author" content="Teetham Treelayapewat" />
+  <meta name="theme-color" content="#0b0f17" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="navbar">
+    <nav class="nav-container" aria-label="Main">
+      <a href="index.html" class="nav-logo">Teetham Treelayapewat</a>
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <div class="container">
+      <header class="page-header">
+        <p class="eyebrow">Projects</p>
+        <h1 class="page-title">Selected projects</h1>
+        <p class="page-intro">AI systems, simulations and hardware projects. Each internship summary shows my part of the work and its results.</p>
+      </header>
+
+      <div class="section" style="padding-top:0;">
+        <div class="projects-grid"><article class="project-card" id="altotech"><p class="project-meta">Aug – Sep 2026 · AltoTech internship</p><h2 class="project-title">On-premises LLM Assistant</h2><p class="project-note">LoRA · Hybrid RAG · Agent evaluation</p><p class="project-desc">Fine-tuned a 30B language model for a 13-tool assistant for building energy management, using a 792-example English/Thai corpus curated from real agent traces.</p><h3 class="case-label">My contribution</h3><p class="project-desc">Implemented vector + keyword retrieval over 41 equipment manuals and chunked cross-entropy loss for full 32k-token training inputs on one 80 GB GPU.</p><h3 class="case-label">Evaluation</h3><p class="project-desc">Retrieval improved from 8/12 to 10/12 on the reported check. The broader agent suite covered 289 cases for tool selection, arguments, retrieval, and safety. The 12-item retrieval check is a small evaluation sample.</p><a class="section-link" href="experience.html">Related internship experience →</a></article>
+<article class="project-card" id="meticuly"><p class="project-meta">Jun 2025 – May 2026 · Meticuly internship</p><h2 class="project-title">Production CT Classification Pipeline</h2><p class="project-note">DICOM → 2D views → BiomedCLIP + EVA-02 → Quality ranking</p><p class="project-desc">A pipeline for the production CraNeXt system that picks the best post-craniectomy skull scan from all the CT series in a case.</p><h3 class="case-label">Problem</h3><p class="project-desc">Each case has many CT series: different planes, slice thicknesses, and bone or soft-tissue windows. The first version ranked them only with rules on DICOM metadata and folder names (gantry tilt, missing slices, slice thickness, bone window, pixel spacing, plane). Metadata cannot show what is in the image, so the top pick could be a skull scan without the craniectomy.</p><h3 class="case-label">What I built</h3><p class="project-desc">Converted DICOM to NIfTI and made axial, coronal and sagittal 2D views. BiomedCLIP labels the body region (skull/brain, skull and neck, neck, chest, abdomen). For skull scans, a fine-tuned EVA-02 classifies pre- or post-craniectomy, and the ranking now prefers post-craniectomy scans. The output is a ranked JSON file.</p><h3 class="case-label">Model choice</h3><p class="project-desc">Benchmarked 8 models (5M–1,012M parameters) on accuracy, speed and size, and chose the smallest, EVA-02 Tiny.</p><h3 class="case-label">Results</h3><p class="project-desc">99.4% body-region accuracy (321 of 323 predictions) and 96.1% craniectomy accuracy (99 of 103).</p><ul class="tags" aria-label="Tools and methods"><li class="tag">DICOM</li><li class="tag">NIfTI</li><li class="tag">BiomedCLIP</li><li class="tag">EVA-02</li></ul><a class="section-link" href="experience.html">Related internship experience →</a></article>
+        <article class="project-card fade-in">
+          <p class="project-meta">Meticuly internship</p>
+          <h2 class="project-title">Cephalometric X-ray Landmark Detection</h2>
+          <p class="project-desc">Detects 29 landmarks on cephalometric X-rays, built with dentists from Thammasat University. Compared 3 architectures on 1,000+ images and reached a <strong>1.12 mm</strong> Mean Radial Error, using multi-GPU training on the LANTA Supercomputer.</p>
+          <ul class="tags" aria-label="Tools and methods">
+            <li class="tag">PyTorch</li>
+            <li class="tag">Computer vision</li>
+            <li class="tag">Multi-GPU training</li>
+            <li class="tag">LANTA</li>
+          </ul>
+        </article>
+        <article class="project-card fade-in">
+          <p class="project-meta">Feb 2023 &ndash; May 2025 &middot; C++ / Geant4</p>
+          <h2 class="project-title">High-Energy Particle Simulation</h2>
+          <p class="project-note">Thailand Representative and Finalist, Regeneron ISEF 2025</p>
+          <p class="project-desc">Wrote a C++ simulation in CERN's Geant4 to study Relativistic Runaway Electron Avalanches under varying magnetic and intermediate fields, tracking particle trajectories and interactions at scale.</p>
+          <ul class="tags" aria-label="Tools and methods">
+            <li class="tag">C++</li>
+            <li class="tag">Geant4</li>
+            <li class="tag">Simulation</li>
+          </ul>
+        </article>
+        <article class="project-card fade-in">
+          <p class="project-meta">2025 &middot; SUTD</p>
+          <h2 class="project-title">SOAR Autonomous Object Collection Vehicle</h2>
+          <p class="project-note">Best Automation Award, SUTD SOAR Challenge 2025</p>
+          <p class="project-desc">An autonomous vehicle that collects objects, built for the SUTD SOAR Challenge.</p>
+        </article>
+        <article class="project-card fade-in">
+          <p class="project-meta">Mar 2023 &ndash; Jun 2023</p>
+          <h2 class="project-title">Automated Tensile Strength Testing Machine</h2>
+          <p class="project-note">Presented at the 18th Siam Physics Congress (SPC2023)</p>
+          <p class="project-desc">Designed and built an automated testing machine with embedded control, dual-range force sensors, real-time data acquisition and custom 3D-printed parts.</p>
+          <ul class="tags" aria-label="Tools and methods">
+            <li class="tag">Embedded control</li>
+            <li class="tag">Sensors</li>
+            <li class="tag">3D printing</li>
+          </ul>
+        </article>
+        <article class="project-card fade-in">
+          <p class="project-meta">2024</p>
+          <h2 class="project-title">ASEAN RE-WASTE Application</h2>
+          <p class="project-note">Top 10 Finalists, ASEAN Data Science Explorers 2024</p>
+          <p class="project-desc">An application built for ASEAN Data Science Explorers, a competition run by SAP and the ASEAN Foundation.</p>
+        </article>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; 2026 Teetham Treelayapewat &middot; Singapore</p>
+      <ul class="footer-links">
+        <li><a href="mailto:teetham.contact@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/teetham" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/teetham-t" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Teetham Treelayapewat</title>
+  <meta name="description" content="Work experience of Teetham Treelayapewat: AI Engineer Intern at AltoTech (LLM fine-tuning, RAG), AI Researcher at BOTNOI Group (computer vision), and AI Development Engineer Intern at Meticuly (medical imaging)." />
+  <meta name="author" content="Teetham Treelayapewat" />
+  <meta name="theme-color" content="#0b0f17" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="navbar">
+    <nav class="nav-container" aria-label="Main">
+      <a href="index.html" class="nav-logo">Teetham Treelayapewat</a>
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html" aria-current="page">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <div class="container">
+      <header class="page-header">
+        <p class="eyebrow">Experience</p>
+        <h1 class="page-title">Work experience</h1>
+        <p class="page-intro">Three AI internships, newest first.</p>
+      </header>
+
+      <div class="section" style="padding-top:0;">
+      <article class="role fade-in">
+        <p class="role-when"><span>Aug 2026 &ndash; Sep 2026</span><span>Thailand &middot; Onsite&nbsp;+&nbsp;remote</span></p>
+        <div>
+          <h2 class="role-company">AltoTech</h2>
+          <p class="role-title">AI Engineer Intern</p>
+          <p class="role-about">AI for building energy management.</p>
+          <ul class="bullets">
+            <li>Fine-tuned a <strong>30B</strong> language model with LoRA for a <strong>13-tool</strong> AI assistant running fully on-premises, without cloud inference.</li>
+            <li>Curated a <strong>792-example</strong> English/Thai training corpus from real agent traces, including tool schemas and multi-turn tool calls.</li>
+            <li>Implemented hybrid RAG (vector + keyword) over <strong>41</strong> equipment manuals, improving retrieval from <strong>8/12 to 10/12</strong>.</li>
+            <li>Expanded the agent evaluation suite to <strong>289</strong> cases testing tool selection, call arguments, retrieval and safety.</li>
+            <li>Profiled GPU memory and implemented a chunked cross-entropy loss to train on full <strong>32k-token</strong> inputs on one 80 GB GPU.</li>
+          </ul>
+          <ul class="tags" aria-label="Tools and methods">
+            <li class="tag">LoRA</li>
+            <li class="tag">RAG</li>
+            <li class="tag">Agent tool-calling</li>
+            <li class="tag">Evaluation</li>
+            <li class="tag">GPU memory profiling</li>
+          </ul>
+        </div>
+      </article>
+      <article class="role fade-in">
+        <p class="role-when"><span>Jun 2026 &ndash; Aug 2026</span><span>Thailand &middot; Remote</span></p>
+        <div>
+          <h2 class="role-company">BOTNOI Group</h2>
+          <p class="role-title">AI Researcher &amp; Development Intern</p>
+          <p class="role-about">Conversational AI company.</p>
+          <ul class="bullets">
+            <li>Delivered the store open/close detection module of a <strong>5-module</strong> AI CCTV monitoring system for a retail client, combining YOLO, OCR and luminance analysis in a rule-based state machine.</li>
+            <li>Designed the proof-of-concept review interface for detection evidence and set up Docker Compose testing across <strong>3</strong> repos.</li>
+            <li>Reviewed <strong>5</strong> datasets and <strong>7</strong> papers to scope a Southeast Asian construction foundation model, then built door/window and room segmentation baselines on <strong>400</strong> floor plans.</li>
+          </ul>
+          <ul class="tags" aria-label="Tools and methods">
+            <li class="tag">YOLO</li>
+            <li class="tag">OCR</li>
+            <li class="tag">Computer vision</li>
+            <li class="tag">Segmentation</li>
+            <li class="tag">Docker Compose</li>
+          </ul>
+        </div>
+      </article>
+      <article class="role fade-in">
+        <p class="role-when"><span>Jun 2025 &ndash; May 2026</span><span>Thailand &middot; Onsite, then remote</span></p>
+        <div>
+          <h2 class="role-company">Meticuly</h2>
+          <p class="role-title">AI Development Engineer Intern (extended to remote role)</p>
+          <p class="role-about">3D-printed medical implants. Started onsite in Thailand, then kept working remotely through my first year at SUTD.</p>
+          <ul class="bullets">
+            <li>Developed a CT classification pipeline (DICOM &rarr; region classification &rarr; quality ranking) for the production CraNeXt system.</li>
+            <li>Reached <strong>99.4%</strong> body-region accuracy (BiomedCLIP) and <strong>96.1%</strong> craniectomy accuracy with a fine-tuned EVA-02, picked by benchmarking <strong>8</strong> models (5M&ndash;1,012M parameters) on accuracy, speed and size.</li>
+            <li>Achieved <strong>1.12 mm</strong> error on cephalometric X-ray landmark detection with Thammasat University dentists, using multi-GPU training on the LANTA Supercomputer.</li>
+          </ul>
+          <ul class="tags" aria-label="Tools and methods">
+            <li class="tag">DICOM</li>
+            <li class="tag">BiomedCLIP</li>
+            <li class="tag">EVA-02</li>
+            <li class="tag">Multi-GPU training</li>
+            <li class="tag">LANTA Supercomputer</li>
+          </ul>
+        </div>
+      </article>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; 2026 Teetham Treelayapewat &middot; Singapore</p>
+      <ul class="footer-links">
+        <li><a href="mailto:teetham.contact@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/teetham" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/teetham-t" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
