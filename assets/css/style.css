@@ -983,7 +983,7 @@ html { scroll-padding-top: 90px; }
 .project-result span { font-weight: 400; color: var(--text-muted); }
 /* Closed: both internship cards share one height, summary lines aligned at the bottom.
    Open: each card keeps its own height, so the card next to it does not stretch. */
-.projects-grid:has(.case-details[open]) > .project-card:has(> .case-details) { align-self: start; }
+.projects-grid:has(.case-details[open]) > .project-card { align-self: start; }
 .case-details { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--border); }
 .case-details > summary {
   display: flex; align-items: center; gap: 8px; cursor: pointer; list-style: none;

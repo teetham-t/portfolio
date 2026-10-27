@@ -41,7 +41,7 @@
       <header class="page-header">
         <p class="eyebrow">Projects</p>
         <h1 class="page-title">Selected projects</h1>
-        <p class="page-intro">AI systems, simulations and hardware projects. Open the engineering summary on an internship project to see the problem, my part and the results.</p>
+        <p class="page-intro">AI systems, simulations and hardware projects. Open the engineering summary on a project to see the problem, the approach and the results.</p>
       </header>
 
       <div class="section" style="padding-top:0;">
@@ -59,15 +59,23 @@
           </ul>
         </article>
         <article class="project-card fade-in">
-          <p class="project-meta">Feb 2023 &ndash; May 2025 &middot; C++ / Geant4</p>
+          <p class="project-meta">Feb 2023 &ndash; May 2025 &middot; Team of 2 &middot; C++ / Geant4</p>
           <h2 class="project-title">High-Energy Particle Simulation</h2>
           <p class="project-note">Thailand Representative and Finalist, Regeneron ISEF 2025</p>
-          <p class="project-desc">Wrote a C++ simulation in CERN's Geant4 to study Relativistic Runaway Electron Avalanches under varying magnetic and intermediate fields, tracking particle trajectories and interactions at scale.</p>
+          <p class="project-desc">Team project with a friend. We wrote a C++ simulation in CERN's Geant4 to study Relativistic Runaway Electron Avalanches under varying magnetic and intermediate fields, tracking particle trajectories and interactions at scale.</p>
           <ul class="tags" aria-label="Tools and methods">
             <li class="tag">C++</li>
             <li class="tag">Geant4</li>
             <li class="tag">Simulation</li>
           </ul>
+          <details class="case-details"><summary>Engineering summary</summary>
+            <h3 class="case-label">Question</h3>
+            <p class="project-desc">Terrestrial gamma-ray flashes are bursts of gamma rays from thunderclouds, caused by runaway electrons that multiply in the cloud&rsquo;s electric field (RREA). Earlier simulations assumed dry air. We asked how the cloud&rsquo;s water content and the direction of Earth&rsquo;s magnetic field change this process.</p>
+            <h3 class="case-label">What we built</h3>
+            <p class="project-desc">A Geant4 simulation in C++: a 10 km column of cloud with a downward electric field of 1,000&ndash;2,000 kV/m and a 1 MeV seed electron. We tested two cloud models (0&ndash;0.4% water mixed into air, and lower-density dry air for the cumulus and mature stages) and magnetic fields of 0&ndash;3,000 &micro;T, parallel or perpendicular to the electric field. Python analysis fitted the growth length &lambda; from electron counts at each height and measured photon energies.</p>
+            <h3 class="case-label">Findings</h3>
+            <p class="project-desc">Adding water to the air barely changed &lambda;, but the lower-density mature-stage cloud lowered &lambda; and the maximum photon energy (for example 39.0 to 32.0 MeV at 1,400 kV/m), which points to easier electrical breakdown. The magnetic field barely changed &lambda;, but tilted the photon shower during the first ~500 ns.</p>
+          </details>
         </article>
         <article class="project-card fade-in">
           <p class="project-meta">2025 &middot; SUTD</p>
