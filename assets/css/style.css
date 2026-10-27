@@ -976,3 +976,25 @@ html { scroll-padding-top: 90px; }
 }
 .project-card .project-desc { flex: none; }
 .project-card > .section-link { margin-top: auto; }
+
+/* Internship cards: short by default, full write-up in a collapsible summary.
+   The text stays in the HTML, so crawlers and AI agents still read it. */
+.project-result { font-size: 0.92rem; font-weight: 600; color: var(--text); }
+.project-result span { font-weight: 400; color: var(--text-muted); }
+/* Closed: both internship cards share one height, summary lines aligned at the bottom.
+   Open: each card keeps its own height, so the card next to it does not stretch. */
+.projects-grid:has(.case-details[open]) > .project-card:has(> .case-details) { align-self: start; }
+.case-details { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--border); }
+.case-details > summary {
+  display: flex; align-items: center; gap: 8px; cursor: pointer; list-style: none;
+  font-size: 0.92rem; font-weight: 600; color: var(--accent);
+}
+.case-details > summary::-webkit-details-marker { display: none; }
+.case-details > summary::before {
+  content: '+'; display: inline-grid; place-items: center; width: 18px; height: 18px;
+  border: 1px solid rgba(45, 212, 191, 0.4); border-radius: 4px; font-size: 0.8rem; line-height: 1;
+}
+.case-details[open] > summary::before { content: '−'; }
+.case-details[open] > summary { margin-bottom: 6px; }
+.case-details > * + * { margin-top: 10px; }
+.case-details > .section-link { display: inline-block; margin-top: 14px; }

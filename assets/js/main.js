@@ -8,4 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', event => { if (!event.target.closest('.navbar')) close(); });
     document.addEventListener('keydown', event => { if (event.key === 'Escape') { const wasOpen = links.classList.contains('open'); close(); if (wasOpen) toggle.focus(); } });
   }
+  // Opening projects.html#altotech (etc.) expands that card's engineering summary.
+  const openLinkedSummary = () => { const card = location.hash && document.getElementById(location.hash.slice(1)); card?.querySelector('details')?.setAttribute('open', ''); };
+  openLinkedSummary();
+  window.addEventListener('hashchange', openLinkedSummary);
 });
