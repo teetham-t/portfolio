@@ -46,24 +46,26 @@
 
       <div class="section" style="padding-top:0;">
       <article class="role fade-in">
-        <p class="role-when"><span>Aug 2026 &ndash; Sep 2026</span><span>Thailand &middot; Onsite&nbsp;+&nbsp;remote</span></p>
+        <p class="role-when"><span>Aug 2026 &ndash; Oct 2026</span><span>Thailand</span><span>Onsite, then&nbsp;remote</span></p>
         <div>
           <h2 class="role-company">AltoTech</h2>
           <p class="role-title">AI Engineer Intern</p>
-          <p class="role-about">AI for building energy management.</p>
+          <p class="role-about">AI for building energy management. Onsite from August to September, then remote until October.</p>
           <ul class="bullets">
-            <li>Fine-tuned a <strong>30B</strong> language model with LoRA for a <strong>13-tool</strong> AI assistant running fully on-premises, without cloud inference.</li>
-            <li>Curated a <strong>792-example</strong> English/Thai training corpus from real agent traces, including tool schemas and multi-turn tool calls.</li>
-            <li>Implemented hybrid RAG (vector + keyword) over <strong>41</strong> equipment manuals, improving retrieval from <strong>8/12 to 10/12</strong>.</li>
-            <li>Expanded the agent evaluation suite to <strong>289</strong> cases testing tool selection, call arguments, retrieval and safety.</li>
-            <li>Profiled GPU memory and implemented a chunked cross-entropy loss to train on full <strong>32k-token</strong> inputs on one 80 GB GPU.</li>
+            <li>Fine-tuned a <strong>30B</strong> open model (NVIDIA Nemotron) with LoRA for a <strong>13-tool</strong> building-operations assistant designed to run on-premises, finishing with a two-node training run across two NVIDIA DGX Spark machines.</li>
+            <li>Curated a <strong>792-example</strong> English/Thai training set from real agent traces, and checked it against the test set, holding out rows that shared source documents with test questions.</li>
+            <li>Expanded the agent benchmark from <strong>179 to 289</strong> English/Thai cases covering knowledge, tool routing, navigation, retrieval and safety, scored by rule-based checks plus an LLM judge.</li>
+            <li>Improved hybrid retrieval (vector + keyword) over <strong>41</strong> equipment manuals: fixed wrong citation pages for text that crosses a page break (about <strong>23%</strong> of chunks), and raised the top-1 hit rate on 22 site questions from <strong>55% to 64%</strong>.</li>
+            <li>Fixed memory limits in training: a chunked cross-entropy loss to train on full <strong>32k-token</strong> inputs on one 80 GB GPU, plus memory guards and a checkpoint-resume fix for two-node training.</li>
+            <li>Compared the fine-tuned model with the base model on the benchmark, found no reliable gain (<strong>42.6%</strong> vs <strong>43.6%</strong> on <strong>282</strong> cases), and reported this with the evidence to guide the team&rsquo;s next step.</li>
           </ul>
           <ul class="tags" aria-label="Tools and methods">
             <li class="tag">LoRA</li>
+            <li class="tag">FSDP</li>
+            <li class="tag">DGX Spark</li>
             <li class="tag">RAG</li>
-            <li class="tag">Agent tool-calling</li>
             <li class="tag">Evaluation</li>
-            <li class="tag">GPU memory profiling</li>
+            <li class="tag">Agent tool-calling</li>
           </ul>
         </div>
       </article>
