@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Experience — Teetham Treelayapewat</title>
-  <meta name="description" content="Work experience of Teetham Treelayapewat: AI Engineer Intern at AltoTech (LLM fine-tuning, RAG), AI Researcher at BOTNOI Group (computer vision), and AI Development Engineer Intern at Meticuly (medical imaging)." />
+  <meta name="description" content="Work experience of Teetham Treelayapewat: AI Engineer Intern at MicroChain Token (3D guides), AltoTech (LLMs, RAG and site data collection), BOTNOI Group (computer vision), and Meticuly (medical imaging)." />
   <meta name="author" content="Teetham Treelayapewat" />
   <meta name="theme-color" content="#0b0f17" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20261112" />
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -41,10 +41,30 @@
       <header class="page-header">
         <p class="eyebrow">Experience</p>
         <h1 class="page-title">Work experience</h1>
-        <p class="page-intro">Three AI internships, newest first.</p>
+        <p class="page-intro">Four AI internships, newest first.</p>
       </header>
 
       <div class="section" style="padding-top:0;">
+      <article class="role fade-in">
+        <p class="role-when"><span>Oct 2026 &ndash; Present</span><span>Hangzhou, China</span><span>Onsite</span></p>
+        <div>
+          <h2 class="role-company">MicroChain Token</h2>
+          <p class="role-title">AI Engineer Intern <!-- TODO: confirm official title --></p>
+          <p class="role-about">AI start-up building vision-enabled after-sales customer-service robots for consumer electronics. Startup internship during the DGIT programme at Zhejiang University.</p>
+          <ul class="bullets">
+            <li>Building <strong>Manifold</strong>, an AI pipeline that turns product photos and a PDF manual into a component-level 3D model with animated, step-by-step guides. A person reviews every result before it is published.</li>
+            <li>Wrote a reusable agent Skill for Codex and Claude Code that builds component-level Blender models with named animations and checks for overlaps, motion collisions and bad pivots (v1 &rarr; v3, <strong>28</strong> unit tests).</li>
+            <li>Self-hosted and benchmarked <strong>5</strong> open-source image-to-3D and LLM models on an RTX 4090, and showed the self-hosted Hunyuan3D-2.1 matches the official version.</li>
+            <li>Deployed a 3-server pilot on Alibaba Cloud with on-demand compute that shuts down when idle. Full product builds took <strong>13&ndash;21</strong> min.</li>
+          </ul>
+          <ul class="tags" aria-label="Tools and methods">
+            <li class="tag">Blender (bpy)</li>
+            <li class="tag">LLM agents</li>
+            <li class="tag">Image-to-3D</li>
+            <li class="tag">Alibaba Cloud</li>
+          </ul>
+        </div>
+      </article>
       <article class="role fade-in">
         <p class="role-when"><span>Aug 2026 &ndash; Oct 2026</span><span>Thailand</span><span>Onsite, then&nbsp;remote</span></p>
         <div>
@@ -52,12 +72,11 @@
           <p class="role-title">AI Engineer Intern</p>
           <p class="role-about">AI for building energy management. Onsite from August to September, then remote until October.</p>
           <ul class="bullets">
-            <li>Fine-tuned a <strong>30B</strong> open model (NVIDIA Nemotron) with LoRA for a <strong>13-tool</strong> building-operations assistant designed to run on-premises, finishing with a two-node training run across two NVIDIA DGX Spark machines.</li>
-            <li>Curated a <strong>792-example</strong> English/Thai training set from real agent traces, and checked it against the test set, holding out rows that shared source documents with test questions.</li>
-            <li>Expanded the agent benchmark from <strong>179 to 289</strong> English/Thai cases covering knowledge, tool routing, navigation, retrieval and safety, scored by rule-based checks plus an LLM judge.</li>
-            <li>Improved hybrid retrieval (vector + keyword) over <strong>41</strong> equipment manuals: fixed wrong citation pages for text that crosses a page break (about <strong>23%</strong> of chunks), and raised the top-1 hit rate on 22 site questions from <strong>55% to 64%</strong>.</li>
-            <li>Fixed memory limits in training: a chunked cross-entropy loss to train on full <strong>32k-token</strong> inputs on one 80 GB GPU, plus memory guards and a checkpoint-resume fix for two-node training.</li>
-            <li>Compared the fine-tuned model with the base model on the benchmark, found no reliable gain (<strong>42.6%</strong> vs <strong>43.6%</strong> on <strong>282</strong> cases), and reported this with the evidence to guide the team&rsquo;s next step.</li>
+            <li>Fine-tuned a <strong>30B</strong> open model (NVIDIA Nemotron) with LoRA for a <strong>13-tool</strong> building-operations assistant, including a two-node run on two NVIDIA DGX Spark machines and a chunked loss to fit <strong>32k-token</strong> inputs on one 80 GB GPU.</li>
+            <li>Built a <strong>792-example</strong> English/Thai training set from real agent traces, and grew the agent benchmark from <strong>179 to 289</strong> cases, scored by rule-based checks plus an LLM judge.</li>
+            <li>Improved hybrid retrieval over <strong>41</strong> equipment manuals, fixing wrong citation pages for about <strong>23%</strong> of chunks and raising the top-1 hit rate on 22 site questions from <strong>55% to 64%</strong>.</li>
+            <li>Found that fine-tuning gave no reliable gain over the base model (<strong>42.6%</strong> vs <strong>43.6%</strong> on <strong>282</strong> cases), and reported it with the evidence to guide the team&rsquo;s next step.</li>
+            <li id="altotech-site-visit">Joined a hotel site visit and spoke with chiller-plant engineers, learning how equipment limitations shape the collection of operating data for AI.</li>
           </ul>
           <ul class="tags" aria-label="Tools and methods">
             <li class="tag">LoRA</li>
@@ -78,7 +97,8 @@
           <ul class="bullets">
             <li>Delivered the store open/close detection module of a <strong>5-module</strong> AI CCTV monitoring system for a retail client, combining YOLO, OCR and luminance analysis in a rule-based state machine.</li>
             <li>Designed the proof-of-concept review interface for detection evidence and set up Docker Compose testing across <strong>3</strong> repos.</li>
-            <li>Reviewed <strong>5</strong> datasets and <strong>7</strong> papers to scope a Southeast Asian construction foundation model, then built door/window and room segmentation baselines on <strong>400</strong> floor plans.</li>
+            <li>Reviewed <strong>5</strong> datasets and <strong>7</strong> papers to scope a Southeast Asian construction foundation model.</li>
+            <li>Built door/window and room segmentation baselines on <strong>400</strong> floor plans.</li>
           </ul>
           <ul class="tags" aria-label="Tools and methods">
             <li class="tag">YOLO</li>
@@ -98,6 +118,7 @@
           <ul class="bullets">
             <li>Developed a CT classification pipeline (DICOM &rarr; region classification &rarr; quality ranking) for the production CraNeXt system.</li>
             <li>Reached <strong>99.4%</strong> body-region accuracy (BiomedCLIP) and <strong>96.1%</strong> craniectomy accuracy with a fine-tuned EVA-02, picked by benchmarking <strong>8</strong> models (5M&ndash;1,012M parameters) on accuracy, speed and size.</li>
+            <li>Wrote rule-based quality checks (gantry tilt, missing slices, slice thickness, pixel spacing and more) that rank the scans and pick the best post-craniectomy skull scan.</li>
             <li>Achieved <strong>1.12 mm</strong> error on cephalometric X-ray landmark detection with Thammasat University dentists, using multi-GPU training on the LANTA Supercomputer.</li>
           </ul>
           <ul class="tags" aria-label="Tools and methods">
